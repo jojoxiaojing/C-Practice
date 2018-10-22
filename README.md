@@ -119,6 +119,101 @@
     ```
 
 ## Environments
+1. Header files
+
+    In a multi-file C program:
+        * Each .c file has a corresponding .h (header) file.
+    * A header file declares the functions in its .c file.
+    * To call those functions from a different .c file, that .c file must #include the right header file.
+    * Each .c file also #includes its own header file. e.g. calc.c would also have “#include "calc.h"”.
+    
+    calc.c
+    
+    ```
+    #include "calc.h" /* Include header file */
+    
+    double square(double n) { return n * n; }    double cube(double n)   { return n * n * n; }
+    ```
+    
+    calc.h (header file)
+    
+    ```
+    double square(double n); /* Declarations */double cube(double n);
+    ```
+    
+    main.c
+    
+    ```
+    #include "calc.h" /* Include header file */
+        ...    result = square(5) + cube(5);
+    ```
+
+2. The Compilation Process
+            
+            C code
+             |
+             |  Preprocessing
+            \|/
+        Preprocessed C code
+             |
+             |  Compilation
+            \|/
+        Assembler code
+             |
+             |  Assembly
+            \|/
+         Object file
+             |
+             |  Linking
+            \|/
+         Executable file
+         
+3. Preprocessor and Directives
+    * The #include Directive:
+        * Use <...> for standard header files (in pre-defined directories).  
+        
+        ```
+        #include <stdio.h>        ``` 
+        * Use "..." for your own header files,in the current directory.
+    
+        ```        #include "myfunctions.h"
+        ```    * The #define Directive
+        * Assigns a name to a constant value.        * Everywhere that name occurs, the preprocessor replaces it with the given value.
+        
+        ```
+        #define PI 3.141592654
+        #define OUTPUT_STRING "Hello World!"
+        ```
+        
+    * The #define — Macros
+        * Small snippets of code with parameters (but not functions).        * Works by substitution.
+        * Place brackets around macro parameters.        * Place brackets around the entire macro definition.
+        
+        ```
+        #define SQUARE(x)  ((x) * (x))
+                int squareSum(int a, int b) {            return SQUARE(a + b);        }
+        ```
+    
+    * The #ifdef and #endif directives
+        * A segment of code is only compiled if a given name has been        * \#defined (“conditional compilation”). 
+        
+        ```
+        #define DEBUG 1
+                ...        int i, sum = 0;        for(i = 0; i < 100; i++) {          sum += i;          #ifdef DEBUG          printf("%d ", sum);          #endif        }
+        ```
+        
+4. Object Files
+    * The last output is an object (.o) file for each .c file.
+    * .o files contain compiled code, but they are not executable.    * They contain functions and function calls that have not yet been “linked” to each other.
+
+5. Linking
+
+    * Takes one or multiple .o files and produces a single executable.
+
+    ```
+    gcc -c main.c                           //compile    gcc -c other1.c                         //compile    gcc -c other2.c                         //compile    gcc main.o other1.o other2.o -o prog    //link
+    ```
+    
 ## Pointers
 ## Arrays and Strings
 ## Input and Output
