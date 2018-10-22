@@ -1,6 +1,15 @@
 # C-Practice
 
-[TOC]
+* [C-Practice](#c-practice)
+      * [Basics](#basics)
+      * [Pointers](#pointers)
+      * [Arrays and Strings](#arrays-and-strings)
+      * [Input and Output](#input-and-output)
+      * [Structs](#structs)
+      * [Shell Scripting](#shell-scripting)
+      * [Debugging and Testing](#debugging-and-testing)
+      * [Misc C](#misc-c)
+
 
 ## Basics
 1. Data types
