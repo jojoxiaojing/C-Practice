@@ -1,17 +1,19 @@
-# C-Practice
+Table of Contents
+=================
 
-* [C-Practice](#c-practice)
-      * [Basics](#basics)
-      * [Pointers](#pointers)
-      * [Arrays and Strings](#arrays-and-strings)
-      * [Input and Output](#input-and-output)
-      * [Structs](#structs)
-      * [Shell Scripting](#shell-scripting)
-      * [Debugging and Testing](#debugging-and-testing)
-      * [Misc C](#misc-c)
+   * [Table of Contents](#table-of-contents)
+   * [Basics](#basics)
+   * [Pointers](#pointers)
+   * [Arrays and Strings](#arrays-and-strings)
+   * [Input and Output](#input-and-output)
+   * [Structs](#structs)
+   * [Shell Scripting](#shell-scripting)
+   * [Debugging and Testing](#debugging-and-testing)
+   * [Misc C](#misc-c)
 
 
-## Basics
+
+# Basics
 1. Data types
     * Signed integers: int, short, long.
     * Unsigned integers: unsigned int, unsigned short, unsigned long (cannot be negative)    * Reals: float, double, long double
@@ -130,7 +132,7 @@
     ./prog
     ```
 
-## Environments
+# Environments
 1. Header files
 
     In a multi-file C program:
@@ -226,12 +228,12 @@
     gcc -c main.c                           //compile    gcc -c other1.c                         //compile    gcc -c other2.c                         //compile    gcc main.o other1.o other2.o -o prog    //link
     ```
     
-## Pointers
-## Arrays and Strings
-## Input and Output
-## Structs
-## Shell Scripting
-## Debugging and Testing
-## Misc C
+# Pointers
+# Arrays and Strings
+# Input and Output
+# Structs
+# Shell Scripting
+# Debugging and Testing
+# Misc C
 
 
