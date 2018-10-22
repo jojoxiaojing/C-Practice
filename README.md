@@ -3,6 +3,7 @@ Table of Contents
 
    * [Table of Contents](#table-of-contents)
    * [Basics](#basics)
+   * [Environments](#environments)
    * [Pointers](#pointers)
    * [Arrays and Strings](#arrays-and-strings)
    * [Input and Output](#input-and-output)
@@ -133,8 +134,8 @@ Table of Contents
     ```
 
 # Environments
-1. Header files
 
+1. Header files
     In a multi-file C program:
         * Each .c file has a corresponding .h (header) file.
     * A header file declares the functions in its .c file.
