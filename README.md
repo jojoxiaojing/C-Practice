@@ -1,4 +1,7 @@
 # C-Practice
+
+[TOC]
+
 ## Basics
 1. Data types
     * Signed integers: int, short, long.
